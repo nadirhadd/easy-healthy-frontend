@@ -1,9 +1,10 @@
 import styles from "../style";
 import askDoctor from "../assets/ask-doctor.jpg";
+import { Link, NavLink } from "react-router-dom";
 
 const Ask = () => {
   return (
-    <section className="w-full">
+    <section id="ask" className="w-full">
       <div className={`flex ${styles.flexCenter} ${styles.paddingY}`}>
         <h1 className="font-mont font-bold text-4xl">Tanya Dokter</h1>
       </div>
@@ -18,12 +19,16 @@ const Ask = () => {
         }}
       >
         <div className="py-12">
-          <h2 className="text-5xl font-bold">Konsultasi Gratis</h2>
-          <span className="text-4xl font-light py-5">Chat dengan Dokter</span>
+          <h2 className="text-5xl font-bold pb-2">Konsultasi Gratis</h2>
+          <span className="text-4xl font-light py-5">Melalui Forum</span>
         </div>
-        <button className="bg-accent text-xl rounded-[5px] p-3">
-          Tanya Dokter
-        </button>
+        <div>
+          <NavLink to={(Link.path = "/tanya-dokter")}>
+            <button className="bg-accent text-xl rounded-[5px] p-3">
+              Tanya Dokter
+            </button>
+          </NavLink>
+        </div>
       </div>
     </section>
   );

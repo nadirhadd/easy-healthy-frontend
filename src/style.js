@@ -9,7 +9,7 @@ const styles = {
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
   gridBook: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4",
-  gridDoc: "grid grid-rows-2",
+  gridDoc: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6",
 
   paddingX: "sm:px-16 px-3",
   paddingY: "sm:py-16 py-3",

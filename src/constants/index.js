@@ -1,11 +1,13 @@
 import article1 from "../assets/article-1.jpg";
-import article2 from "../assets/article-2.jpg";
-import article3 from "../assets/article-3.jpg";
+import article2 from "../assets/article-3.jpg";
+import article3 from "../assets/article-2.jpg";
+import { doct1, doct2, doct3, doct4 } from "../assets/assets";
 
 export const navLinks = [
   {
     id: "booking",
     title: "Booking Antrian",
+    path: "/#booking",
   },
   {
     id: "ask",
@@ -18,6 +20,7 @@ export const navLinks = [
   {
     id: "schedule",
     title: "Jadwal Dokter",
+    path: "/schedule",
   },
 ];
 
@@ -28,6 +31,7 @@ export const doctor = [
     unit: "Poli Umum",
     spesialis: "Umum",
     jadwal: "Senin - Jumat : 08.00 - 14.00",
+    photo: doct1,
   },
   {
     id: "doctor-2",
@@ -35,6 +39,7 @@ export const doctor = [
     unit: "Bedah",
     spesialis: "Bedah Plastik",
     jadwal: "Kamis - Sabtu : 14.00 - 20.00",
+    photo: doct2,
   },
   {
     id: "doctor-3",
@@ -42,6 +47,7 @@ export const doctor = [
     unit: "Psikologi",
     spesialis: "Psikolog",
     jadwal: "Selasa - Kamis : 15.00 - 21.00",
+    photo: doct3,
   },
   {
     id: "doctor-4",
@@ -49,6 +55,7 @@ export const doctor = [
     unit: "Pediatric",
     spesialis: "Anak",
     jadwal: "Rabu - Sabtu : 09.00 - 15.00",
+    photo: doct4,
   },
 ];
 
@@ -84,16 +91,19 @@ export const news = [
     id: "news1",
     title: "Studi: Minum Kopi dan Teh Baik untuk Kesehatan Liver",
     bg: article1,
+    link: "https://health.kompas.com/read/24D14080140468/studi-minum-kopi-dan-teh-baik-untuk-kesehatan-liver",
   },
   {
     id: "news2",
     title: "16 Cara Sederhana Mengatasi Stres",
     bg: article2,
+    link: "https://health.kompas.com/read/24D14204500868/16-cara-sederhana-mengatasi-stres?page=all",
   },
   {
     id: "news3",
     title: "Tips Mengatasi Kelelahan Perjalanan Selama Mudik Lebaran",
     bg: article3,
+    link: "https://health.kompas.com/read/24D14140000768/tips-mengatasi-kelelahan-perjalanan-selama-mudik-lebaran?page=all",
   },
 ];
 

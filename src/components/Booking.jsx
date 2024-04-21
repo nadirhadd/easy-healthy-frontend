@@ -5,7 +5,7 @@ import SubmitBtn from "./SubmitBtn";
 import bookBg from "../assets/booking-bg.jpg";
 
 const Booking = () => (
-  <section className="h-full">
+  <section id="booking" className="h-full">
     <div className={`${styles.flexCenter} ${styles.paddingY}`}>
       <h1 className="font-bold text-4xl font-mont">Booking Antrian</h1>
     </div>
@@ -18,7 +18,7 @@ const Booking = () => (
       className={`${styles.paddingY}`}
     >
       <div
-        className={`${styles.paddingY} bg-accent rounded-xl flex flex-col items-center justify-center md:w-3/4 lg:w-1/2 xl:w-1/3 mx-auto`}
+        className={`${styles.paddingY} bg-accent rounded-xl flex flex-col items-center justify-center md:w-3/4 mx-auto`}
       >
         <div className={`${styles.gridBook} p-4 font-mont`}>
           {bookForm.map((booking) => (

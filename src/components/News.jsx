@@ -3,7 +3,7 @@ import { news } from "../constants";
 
 const News = () => {
   return (
-    <section className={`flex md:flex-col flex-col`}>
+    <section id="news" className={`flex md:flex-col flex-col`}>
       <div
         className={`${styles.paddingY} flex flex-row items-center px-[20px]`}
       >
@@ -39,7 +39,11 @@ const News = () => {
             />
             <h4 className="px-[20px] font-mont text-primary font-bold text-2xl relative z-10 flex flex-col justify-start">
               {berita.title}
-              <a href="#" className="py-[10px] text-sm hover:text-secondary">
+              <a
+                href={berita.link}
+                target="_blank"
+                className="py-[10px] text-sm hover:text-secondary"
+              >
                 Baca Selengkapnya
               </a>
             </h4>
