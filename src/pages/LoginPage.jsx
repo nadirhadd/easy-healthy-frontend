@@ -67,7 +67,7 @@ const LoginPage = () => {
           />
         </div>
         <div className="flex justify-center">
-          <NavLink to={(Link.path = "/home-login")}>
+          <NavLink to={(Link.path = "/")}>
             <button className={`bg-accent px-6 py-2 rounded-md font-mont`}>
               Sign In
             </button>

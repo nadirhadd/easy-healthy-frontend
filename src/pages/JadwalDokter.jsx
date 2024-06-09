@@ -1,10 +1,21 @@
+import React, { useEffect, useState } from "react";
 import { Footer, Navbar } from "../components";
 import styles from "../style";
-import { doctor } from "../constants";
 
 const JadwalDokter = () => {
+  const [doctors, setDoctors] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/profiles')
+      .then(response => response.json())
+      .then(data => setDoctors(data))
+      .catch(error => {
+      console.error('Error fetching!', error);
+    })
+  }, []);
+
   return (
-    <section className="bg-primary w-full overflow-hidden">
+    <section className={`bg-primary w-full overflow-hidden`}>
       <div className={`${styles.paddingX}`}>
         <Navbar />
         <div className={`${styles.paddingY}`}>
@@ -14,23 +25,18 @@ const JadwalDokter = () => {
             <h1>Jadwal Dokter</h1>
           </div>
           <div
-            className={`${styles.paddingX} ${styles.paddingY} ${styles.gridDoc}`}
+            className={`${styles.paddingX} ${styles.paddingY} ${styles.gridDoc} bg-accent rounded-xl`}
           >
-            {doctor.map((jadwal) => (
+            {doctors.map((doctor) => (
               <div
-                key={jadwal.id}
+                key={doctor.id}
                 className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col"
               >
-                <img
-                  src={jadwal.photo}
-                  alt={jadwal.name}
-                  className="h-full w-full"
-                />
                 <div className="p-6">
-                  <h2 className="text-xl font-bold py-3">{jadwal.name}</h2>
-                  <p className="text-gray-600">{jadwal.unit}</p>
-                  <p className="text-gray-600">{jadwal.spesialis}</p>
-                  <p className="text-gray-600">{jadwal.jadwal}</p>
+                  <h2 className="text-xl font-bold py-3">{doctor.name}</h2>
+                  <p className="text-gray-600">{doctor.unit}</p>
+                  <p className="text-gray-600">{doctor.spesialis}</p>
+                  <p className="text-gray-600">{doctor.jadwal}</p>
                 </div>
               </div>
             ))}

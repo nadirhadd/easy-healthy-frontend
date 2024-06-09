@@ -14,10 +14,6 @@ export const navLinks = [
     title: "Tanya Dokter",
   },
   {
-    id: "room",
-    title: "Ketersediaan Ruang",
-  },
-  {
     id: "schedule",
     title: "Jadwal Dokter",
     path: "/schedule",
@@ -72,6 +68,14 @@ export const doctor = [
   },
   {
     id: "doctor-4",
+    name: "dr. Annie Leonhart",
+    unit: "Pediatric",
+    spesialis: "Anak",
+    jadwal: "Rabu - Sabtu : 09.00 - 15.00",
+    photo: doct4,
+  },
+  {
+    id: "doctor-5",
     name: "dr. Annie Leonhart",
     unit: "Pediatric",
     spesialis: "Anak",
