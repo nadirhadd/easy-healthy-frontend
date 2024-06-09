@@ -5,9 +5,6 @@ import Footer from "./Footer";
 import News from "./News";
 import LoginButton from "./LoginButton";
 import Hero from "./Hero";
-import SubmitBtn from "./SubmitBtn";
-import NavbarUser from "./NavbarUser";
-import FooterUser from "./FooterUser";
 
 export {
   Navbar,
@@ -17,7 +14,4 @@ export {
   News,
   LoginButton,
   Hero,
-  SubmitBtn,
-  NavbarUser,
-  FooterUser,
 };

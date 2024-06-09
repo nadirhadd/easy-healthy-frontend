@@ -41,76 +41,6 @@ export const navLinksUser = [
   },
 ];
 
-export const doctor = [
-  {
-    id: "doctor-1",
-    name: "dr. Antonella Chauvez",
-    unit: "Poli Umum",
-    spesialis: "Umum",
-    jadwal: "Senin - Jumat : 08.00 - 14.00",
-    photo: doct1,
-  },
-  {
-    id: "doctor-2",
-    name: "dr. Ousmane Hakimi",
-    unit: "Bedah",
-    spesialis: "Bedah Plastik",
-    jadwal: "Kamis - Sabtu : 14.00 - 20.00",
-    photo: doct2,
-  },
-  {
-    id: "doctor-3",
-    name: "dr. Syarif Hamzah",
-    unit: "Psikologi",
-    spesialis: "Psikolog",
-    jadwal: "Selasa - Kamis : 15.00 - 21.00",
-    photo: doct3,
-  },
-  {
-    id: "doctor-4",
-    name: "dr. Annie Leonhart",
-    unit: "Pediatric",
-    spesialis: "Anak",
-    jadwal: "Rabu - Sabtu : 09.00 - 15.00",
-    photo: doct4,
-  },
-  {
-    id: "doctor-5",
-    name: "dr. Annie Leonhart",
-    unit: "Pediatric",
-    spesialis: "Anak",
-    jadwal: "Rabu - Sabtu : 09.00 - 15.00",
-    photo: doct4,
-  },
-];
-
-export const ruangan = [
-  {
-    id: "ruang-1",
-    gedung: "Gedung",
-    lantai: "Lantai",
-    kasur: "Jumlah Kasur Tersedia",
-  },
-  {
-    id: "ruang-2",
-    gedung: "Gedung",
-    lantai: "Lantai",
-    kasur: "Jumlah Kasur Tersedia",
-  },
-  {
-    id: "ruang-3",
-    gedung: "Gedung",
-    lantai: "Lantai",
-    kasur: "Jumlah Kasur Tersedia",
-  },
-  {
-    id: "ruang-4",
-    gedung: "Gedung",
-    lantai: "Lantai",
-    kasur: "Jumlah Kasur Tersedia",
-  },
-];
-
 export const news = [
   {
     id: "news1",
@@ -137,35 +67,49 @@ export const bookForm = [
     id: "form1",
     nameForm: "NIK",
     placeholder: "NIK",
+    type: 'text',
+    name: 'NIK',
   },
   {
     id: "form2",
     nameForm: "Nama Pasien",
     placeholder: "Nama Pasien",
+    type: 'text',
+    name: 'Nama_Pasien',
   },
   {
     id: "form3",
     nameForm: "Jenis Pasien",
     placeholder: "Jenis Pasien",
+    type: 'select',
+    name: 'Jenis_Pasien',
   },
   {
     id: "form4",
     nameForm: "Nomor HP",
     placeholder: "Nomor HP",
+    type: 'text',
+    name: 'Nomor_HP',
   },
   {
     id: "form5",
     nameForm: "Dokter",
     placeholder: "Dokter",
+    type: 'text',
+    name: 'Dokter',
   },
   {
     id: "form6",
     nameForm: "Poli",
     placeholder: "Poli",
+    type: 'text',
+    name: 'Poli',
   },
   {
     id: "form7",
     nameForm: "Tanggal Periksa",
     placeholder: "Tanggal Periksa",
+    type: 'date',
+    name: 'Tanggal_Periksa',
   },
 ];
