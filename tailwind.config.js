@@ -9,7 +9,7 @@ export const theme = {
       accent: "#B9B7B7",
     },
     fontFamily: {
-      mont: ["Montserrat", "sans-serif"],
+      mont: ["Poppins", "sans-serif"],
     },
   },
   screens: {

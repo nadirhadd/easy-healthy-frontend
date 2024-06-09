@@ -1,9 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import TanyaDokter from "./pages/TanyaDokter";
 import "./index.css";
-import JadwalDokter from "./pages/JadwalDokter";
-import LoginPage from "./pages/LoginPage";
+import { Home, TanyaDokter, JadwalDokter, LoginPage } from "./pages"
 
 const App = () => {
   return (
