@@ -19,11 +19,11 @@ const Navbar = () => {
         <img src={logo} className="w-[130px] h-[80px]" />
       </NavLink>
 
-      <ul className="list-none sm:flex hidden justify-center items-center flex-1">
+      <ul className="px-10 list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-mont font-normal cursor-pointer text-[16px] ${
+            className={`flex align-center font-mont cursor-pointer text-[16px] ${
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } text-black`}
           >

@@ -10,7 +10,7 @@ const Ask = () => {
       </div>
 
       <div
-        className={`flex ${styles.paddingX} ${styles.paddingY} ${styles.flexStart} flex-col text-primary font-mont`}
+        className={`flex ${styles.paddingX} ${styles.paddingY} ${styles.flexStart} flex-col text-primary font-mont rounded-xl`}
         style={{
           backgroundImage: `url(${askDoctor})`,
           backgroundSize: "cover",
@@ -19,7 +19,7 @@ const Ask = () => {
         }}
       >
         <div className="py-12">
-          <h2 className="text-5xl font-bold pb-2">Konsultasi Gratis</h2>
+          <h2 className="text-6xl font-bold pb-2">Konsultasi Gratis</h2>
           <span className="text-4xl font-light py-5">Melalui Forum</span>
         </div>
         <div>

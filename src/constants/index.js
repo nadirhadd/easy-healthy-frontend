@@ -20,27 +20,6 @@ export const navLinks = [
   },
 ];
 
-export const navLinksUser = [
-  {
-    id: "booking",
-    title: "Booking Antrian",
-    path: "/home-login/#booking",
-  },
-  {
-    id: "ask",
-    title: "Tanya Dokter",
-  },
-  {
-    id: "room",
-    title: "Ketersediaan Ruang",
-  },
-  {
-    id: "schedule",
-    title: "Jadwal Dokter",
-    path: "/schedule-user",
-  },
-];
-
 export const news = [
   {
     id: "news1",
