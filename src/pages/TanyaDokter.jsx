@@ -18,9 +18,14 @@ const TanyaDokter = () => {
         </h1>
       </div>
 
-      <div>
+    <div className={`${styles.boxWidth} ${styles.marginX} ${styles.marginY}`}>
+      <div className="flex">
         <FontAwesomeIcon icon={faUser}/>
+        <div className="px-5 text-xl">
+          <h1>User</h1>
+        </div>
       </div>
+    </div>
 
       <div>
           <Footer/>

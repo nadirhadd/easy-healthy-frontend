@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
-import { Home, TanyaDokter, JadwalDokter, LoginPage } from "./pages"
+import { Home, TanyaDokter, JadwalDokter, LoginPage, RegistrationForm } from "./pages"
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <Route path="/tanya-dokter" Component={TanyaDokter} />
       <Route path="/schedule" Component={JadwalDokter} />
       <Route path="/login" Component={LoginPage} />
+      <Route path="/regist" Component={RegistrationForm} />
     </Routes>
   );
 };
