@@ -1,30 +1,31 @@
 // RegistrationForm.jsx
 
 import React, { useState } from 'react';
-import axios from 'axios'; // for making HTTP requests
+import axios from 'axios';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
     username: '',
-    password: ''
+    password: '',
+    full_name: '',
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, full_name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
+      [full_name]: value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
     try {
-      const response = await axios.post('/register', formData);
-      console.log(response.data); // handle success response
+      const response = await axios.post('http://localhost:3001/register', formData);
+      console.log('success!', response.data);
     } catch (error) {
-      console.error('Error registering user:', error.response.data); // handle error response
+      console.error('Error registering user:', error.response.data);
     }
   };
 
@@ -33,12 +34,15 @@ function RegistrationForm() {
       <h2>User Registration</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
-        <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} required /><br />
+        <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} className='ring-2' required /><br />
 
         <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required /><br />
+        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} className='ring-4' required /><br />
 
-        <button type="submit">Register</button>
+        <label htmlFor="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" value={formData.full_name} onChange={handleChange} className='ring-4' required /><br />
+
+        <button type="submit" className='ring-8'>Register</button>
       </form>
     </div>
   );

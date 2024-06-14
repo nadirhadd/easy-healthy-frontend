@@ -20,7 +20,17 @@ const LoginPage = () => {
       navigate('/');
     } catch (error) {
       console.error('Login failed', error);
-      setError('Invalid');
+      if (error.response) {
+        if (error.response.status === 401) {
+          setError('Invalid username or password')
+        } else {
+          setError(`Server Error: ${error.response.status}`);
+        }
+      } else if (error.request) {
+        setError('Network Error');
+      } else {
+        setError('Error: ' + error.message);
+      }
     }
   };
   

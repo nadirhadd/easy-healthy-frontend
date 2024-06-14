@@ -1,7 +1,5 @@
 import { Navbar, Footer, TanyaDok } from "../components";
 import styles from "../style";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TanyaDokter = () => {
   return (
@@ -16,7 +14,7 @@ const TanyaDokter = () => {
         Forum Tanya Dokter
       </h1>
 
-      <div className={`${styles.flexCenter} ${styles.paddingY}`}>
+      <div className={`px-20`}>
         <TanyaDok/>
       </div>
 
