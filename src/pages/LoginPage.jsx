@@ -2,19 +2,25 @@ import { useState } from "react";
 import styles from "../style";
 import LoginBg from "../assets/login-bg.jpg";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
     try {
-      const response = await axios.post('http://localhost:3001/login', { username, password });
-      console.error(response.data);
-      history.push('/');
+      const response = await axios.post('http://localhost:3001/login', {username, password});
+      console.log(response.data);
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      navigate('/');
     } catch (error) {
-      console.error('login fail', error);
+      console.error('Login failed', error);
+      setError('Invalid');
     }
   };
   
@@ -28,10 +34,10 @@ const LoginPage = () => {
     >
       <form
         onSubmit={handleSubmit}
-        action=""
         className={`bg-primary p-8 rounded-lg shadow-xl ${styles.paddingX} ${styles.paddingY}`}
       >
         <h2 className="text-2xl mb-6 font-bold text-center">Login</h2>
+        {error && <div className="text-red-500 mb-4">{error}</div>}
         <div className="mb-4">
           <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
             Username

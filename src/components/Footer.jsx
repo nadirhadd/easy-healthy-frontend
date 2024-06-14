@@ -28,11 +28,14 @@ const Footer = () => {
           </ul>
         </div>
         <div className="w-[300px] mt-6 lg:mt-0">
-          <p className={`text-start text-20px`}>
+          <p className={`text-start text-20px pb-2`}>
             Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom
-            University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa
-            Barat 40257
+            University, Sukapura
           </p>
+          <p className="py-2">Kec. Dayeuhkolot</p>
+          <p className="py-2">Kabupaten Bandung</p>
+          <p className="py-2">Jawa Barat</p>
+          <p className="py-2">40257</p>
         </div>
       </div>
       <div className={`bg-accent py-10`}>

@@ -20,7 +20,7 @@ const JadwalDokter = () => {
         <Navbar />
         <div className={`${styles.paddingY}`}>
           <div
-            className={`${styles.flexCenter} ${styles.paddingY} font-bold font-mont text-4xl`}
+            className={`${styles.flexCenter} pb-10 font-bold font-mont text-4xl`}
           >
             <h1>Jadwal Dokter</h1>
           </div>

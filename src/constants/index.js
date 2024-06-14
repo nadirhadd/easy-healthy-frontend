@@ -12,6 +12,7 @@ export const navLinks = [
   {
     id: "ask",
     title: "Tanya Dokter",
+    path: "/tanya-dokter"
   },
   {
     id: "schedule",

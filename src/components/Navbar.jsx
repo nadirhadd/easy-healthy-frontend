@@ -1,17 +1,28 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faUser, faX } from "@fortawesome/free-solid-svg-icons";
 
 import { navLinks } from "../constants";
 import logo from "../assets/logo.svg";
 import LoginButton from "./LoginButton";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    document.title = "Easy Healthy";
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      setUser(JSON.parse(loggedInUser));
+    }
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
 
   return (
     <nav className="w-full flex pt-6 justify-between items-center navbar">
@@ -37,7 +48,31 @@ const Navbar = () => {
       </ul>
 
       <div className="sm:flex hidden">
-        <LoginButton />
+        {user ? (
+          <div className="bg-accent rounded-xl font-mont font-semibold cursor-pointer relative">
+            <h1 className="py-2 px-4" onMouseOver={() => setToggle((prev) => !prev)} onClick={() => setToggle((prev) => !prev)}>
+              Hello, {user.username}
+              <FontAwesomeIcon icon={faUser} className="pl-2"/>
+            </h1>
+            {toggle && (
+              <ul className="absolute right-0 mt-2 w-full py-2 bg-white rounded-md flex flex-col items-end">
+                <li className="pr-4 py-2">
+                  Profile
+                </li>
+                <li>
+                  <button
+                    onClick={handleLogout}
+                    className="pr-4 py-2 font-mont cursor-pointer"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            )}
+          </div>
+        ) : (
+          <LoginButton/>
+        )}
       </div>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">

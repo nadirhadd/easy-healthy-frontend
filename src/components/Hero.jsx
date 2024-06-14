@@ -11,15 +11,15 @@ const Hero = () => (
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-row justify-between items-center w-full px-[2rem]">
-        <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-primary ss:leading-[100px] leading-[75px]">
+      <div className={`flex flex-row justify-between items-center w-full px-[2rem]`}>
+        <h1 className={`flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-primary ss:leading-[100px] leading-[75px] ${styles.paddingX}`}>
           Layanan <br className="sm:block hidden" />{" "}
-          <span className="text-gradient">Rumah Sakit</span>{" "}
+          <span className={`text-gradient`}>Rumah Sakit</span>{" "}
         </h1>
       </div>
 
       <p
-        className={`${styles.paragraph} max-w-[490px] mt-5 text-white px-[2rem]`}
+        className={`${styles.paragraph} ${styles.paddingX} max-w-[490px] mt-5 text-white px-[2rem]`}
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis qui
         laudantium a autem ad eum est facilis porro inventore eligendi?
