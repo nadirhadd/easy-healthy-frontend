@@ -57,7 +57,9 @@ const Navbar = () => {
             {toggle && (
               <ul className="absolute right-0 mt-2 w-full py-2 bg-white rounded-md flex flex-col items-end">
                 <li className="pr-4 py-2">
-                  Profile
+                  <NavLink to={(Link.path = '/profile')}>
+                    Profile
+                  </NavLink>
                 </li>
                 <li>
                   <button

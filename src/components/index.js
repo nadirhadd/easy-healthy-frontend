@@ -27,6 +27,9 @@ import CommentForm from "./Forum/Comment/CommentForm";
 import CommentList from "./Forum/Comment/CommentList";
 import CommentItems from "./Forum/Comment/CommentItems";
 
+//Profile
+import Prof from "./Profile/Prof";
+
 export {
   Navbar,
   Ask,
@@ -45,4 +48,5 @@ export {
   QuestionCard,
   QuestionList,
   QuestionForm,
+  Prof,
 };

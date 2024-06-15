@@ -29,7 +29,7 @@ function CommentList() {
           ))}
         </ul>
       ) : (
-        <p className="text-gray-500">There are no questions yet.</p>
+        <p className="text-gray-500">There are no comments yet.</p>
       )}
     </div>
   );

@@ -8,14 +8,16 @@ function RegistrationForm() {
     username: '',
     password: '',
     full_name: '',
+    email: '',
   });
 
   const handleChange = (e) => {
-    const { name, full_name, value } = e.target;
+    const { name, full_name, email, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
       [full_name]: value,
+      [email]: value,
     });
   };
 
@@ -41,6 +43,9 @@ function RegistrationForm() {
 
         <label htmlFor="full_name">Full Name:</label>
         <input type="text" id="full_name" name="full_name" value={formData.full_name} onChange={handleChange} className='ring-4' required /><br />
+
+        <label htmlFor="email">Email:</label>
+        <input type="text" id="email" name="email" value={formData.email} onChange={handleChange} className='ring-4' required /><br />
 
         <button type="submit" className='ring-8'>Register</button>
       </form>
