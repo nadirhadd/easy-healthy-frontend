@@ -19,11 +19,13 @@ import UserPost from "./Forum/UserPost";
 import QuestionCard from "./Forum/Question/QuestionCard";
 import QuestionForm from "./Forum/Question/QuestionForm";
 import QuestionList from "./Forum/Question/QuestionList";
+import QuestionItems from "./Forum/Question/QuestionItems";
 
 //Forum - Comment
 import CommentCard from "./Forum/Comment/CommentCard";
 import CommentForm from "./Forum/Comment/CommentForm";
 import CommentList from "./Forum/Comment/CommentList";
+import CommentItems from "./Forum/Comment/CommentItems";
 
 export {
   Navbar,
@@ -38,6 +40,8 @@ export {
   CommentCard,
   CommentForm,
   CommentList,
+  CommentItems,
+  QuestionItems,
   QuestionCard,
   QuestionList,
   QuestionForm,
