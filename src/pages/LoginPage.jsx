@@ -78,10 +78,11 @@ const LoginPage = () => {
             required
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col">
           <button type="submit" className={`bg-accent px-6 py-2 rounded-md font-mont`}>
             Sign In
           </button>
+          <a href={'/regist'} className="pt-5 hover:text-accent">Make an Account</a>
         </div>
       </form>
     </div>

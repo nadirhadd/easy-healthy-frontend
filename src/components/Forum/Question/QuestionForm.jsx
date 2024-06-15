@@ -14,7 +14,7 @@ const QuestionForm = () => {
       setTitle('');
       setContent('');
     } catch (error) {
-      console.error('connection not found' ,error); // Handle errors (optional)
+      console.error('connection not found' ,error);
     }
   };
 

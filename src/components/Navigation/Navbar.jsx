@@ -13,9 +13,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
+    const loggedInUser = localStorage.getItem('user');
     if (loggedInUser) {
-      setUser(JSON.parse(loggedInUser));
+      const parsedUser = JSON.parse(loggedInUser);
+        setUser(parsedUser);
     }
   }, []);
 

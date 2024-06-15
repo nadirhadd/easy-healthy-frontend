@@ -29,10 +29,10 @@ const Prof = () => {
                 <p className='text-lg'>Username</p>
                 <p>{user.username}</p>
               </div>
-              <div>
+              {/* <div>
                 <p>Email</p>
                 <p>{user.email}</p>
-              </div>
+              </div> */}
             </div>
           ): (
             <div className='mt-5 text-2xl'>
